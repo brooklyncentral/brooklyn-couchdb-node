@@ -20,7 +20,7 @@ brooklyn.catalog:
   id: brooklyn-couchdb-node
   version: 0.10.0-SNAPSHOT
   name: CouchDB Node
-  iconUrl: classpath:///couchdb-logo.png
+  iconUrl: https://svn.apache.org/repos/asf/couchdb/supplement/logo/couchdb-logo.png
   description: Apache CouchDB is a database that uses JSON for documents, JavaScript for MapReduce queries, and regular HTTP for an API
   itemType: template
   license: Apache-2.0
