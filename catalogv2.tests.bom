@@ -4,15 +4,15 @@ brooklyn.catalog:
   - id: couchdb2-node-tests
     version: "1.0.0-SNAPSHOT"
     itemType: template
-    name: Couchdb 2.0 node tests
-    description: Test that couchdb 2.0 node is running correctly
+    name: Couchdb 2.1 node tests
+    description: Test that couchdb 2.1 node is running correctly
     iconUrl: classpath:///couchdb-logo.png
     item:
       services:
       - type: brooklyn-couchdb-node
         id: parent-app
         brooklyn.config:
-          install.version: 2.0.0
+          install.version: 2.1.1
 
       - type: test-case
         brooklyn.config:
@@ -33,9 +33,9 @@ brooklyn.catalog:
         - type: assert-restart-process
           name: "3. restart process"
           brooklyn.config:
-            process.grep.name: "[c]ouchdb@localhost"
+            process.grep.name: "[c]ouchdb@127.0.0.1"
 
         - type: assert-stop-and-restart-process
           name: "4. stop and restart process"
           brooklyn.config:
-            process.grep.name: "[c]ouchdb@localhost"
+            process.grep.name: "[c]ouchdb@127.0.0.1"
