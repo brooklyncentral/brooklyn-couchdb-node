@@ -11,6 +11,8 @@ brooklyn.catalog:
       services:
       - type: brooklyn-couchdb-node
         id: parent-app
+        brooklyn.config:
+          install.version: 1.7.1
 
       - type: test-case
         brooklyn.config:
