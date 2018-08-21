@@ -12,7 +12,7 @@ brooklyn.catalog:
       - type: brooklyn-couchdb-node
         id: parent-app
         brooklyn.config:
-          install.version: 1.7.1
+          install.version: 1.7.2
 
       - type: test-case
         brooklyn.config:
